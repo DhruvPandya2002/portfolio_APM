@@ -7,14 +7,14 @@ const Projects = () => {
     {
       title: 'AI Campaign Automation System',
       subtitle: 'Internal Tool @ CRED',
-      description: 'LLM-powered (Claude API) workflow translating business requirements into structured JSON campaign configurations with SOP-aligned prompt engineering and API-integrated internal tooling.',
+      description: 'LLM-powered workflow translating business requirements into structured JSON campaign configurations with SOP-aligned prompt engineering and API-integrated internal tooling. Slack-integrated bot enabling seamless team collaboration and configuration deployment.',
       problem: 'Campaign configuration was time-intensive, requiring 60 minutes of manual JSON setup and increasing deployment timelines across the growth team.',
       impact: [
         { label: 'Time Reduction', value: '75%', subtext: '60 min → 25 min' },
         { label: 'Setup Speed', value: '58%', subtext: 'Faster configuration' },
         { label: 'Team Velocity', value: '↑', subtext: 'Accelerated deployment' }
       ],
-      tech: ['Claude API', 'LLM', 'JSON', 'API Integration', 'Prompt Engineering'],
+      tech: ['Claude API', 'LLM', 'JSON', 'API Integration', 'Prompt Engineering', 'Slack Bot'],
       icon: Sparkles,
       color: 'yellow'
     },

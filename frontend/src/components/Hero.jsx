@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from './ui/button';
-import { ArrowDown, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -26,14 +25,19 @@ const Hero = () => {
             </span>
           </div>
           
-          {/* Name */}
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-            DHRUV LALIT
+          {/* Main Message */}
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight max-w-5xl mx-auto">
+            Building <span className="text-yellow-400">0→1 products</span>
             <br />
-            <span className="text-yellow-400">PANDYA</span>
+            that solve real problems
+            <br />
+            <span className="text-yellow-400">at scale</span>
           </h1>
           
-          {/* Tagline */}
+          {/* Name & Tagline */}
+          <p className="text-2xl md:text-3xl font-bold text-white mb-4">
+            DHRUV LALIT PANDYA
+          </p>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Turning data into decisions. Building systems that scale.
             <br />
@@ -41,7 +45,7 @@ const Hero = () => {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-6 justify-center items-center mb-12">
+          <div className="flex flex-wrap gap-6 justify-center items-center">
             <button
               onClick={scrollToWork}
               className="px-8 py-4 bg-yellow-400 text-black font-bold text-lg rounded-lg shadow-[6px_6px_0px_0px_rgba(255,107,53,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,107,53,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-200"
@@ -54,31 +58,6 @@ const Hero = () => {
             >
               Get In Touch
             </button>
-          </div>
-          
-          {/* Quick Links */}
-          <div className="flex gap-6 justify-center items-center">
-            <a
-              href="https://www.linkedin.com/in/dhruvpandya2002/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors duration-200"
-            >
-              <Linkedin className="w-5 h-5" />
-              <span className="font-medium">LinkedIn</span>
-            </a>
-            <a
-              href="mailto:dhruvpandya2002@gmail.com"
-              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors duration-200"
-            >
-              <Mail className="w-5 h-5" />
-              <span className="font-medium">Email</span>
-            </a>
-          </div>
-          
-          {/* Scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-8 h-8 text-yellow-400" />
           </div>
         </div>
       </div>

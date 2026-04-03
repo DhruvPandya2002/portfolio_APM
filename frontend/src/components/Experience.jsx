@@ -12,7 +12,7 @@ const Experience = () => {
       achievements: [
         {
           title: 'Onboarding Revamp (9M Users)',
-          description: 'Conducted 15 user interviews to identify mid-journey drop-off root causes. Synthesized research into product decisions, redesigning the onboarding journey.',
+          description: 'Conducted user interviews to identify mid-journey drop-off root causes. Synthesized research into product decisions, redesigning the onboarding journey.',
           metrics: ['15% drop-off reduction', '9M+ users educated'],
           icon: TrendingUp
         },
@@ -24,7 +24,7 @@ const Experience = () => {
         },
         {
           title: 'AI Campaign Automation (Internal Tool)',
-          description: 'Co-built an LLM-based (Claude API) internal tool translating business requirements into JSON campaign configurations.',
+          description: 'Co-built an LLM-based internal tool translating business requirements into JSON campaign configurations.',
           metrics: ['58% faster setup', '75% effort reduction'],
           icon: Clock
         },
@@ -51,6 +51,27 @@ const Experience = () => {
         }
       ],
       tools: ['Databricks', 'AWS', 'GCP']
+    },
+    {
+      company: 'Innovate',
+      role: 'Cloud Computing Internship',
+      duration: 'June 2024 - Aug 2024',
+      current: false,
+      achievements: [
+        {
+          title: 'GCP & Microservices Architecture',
+          description: 'Collaborated with Google Cloud Platform (GCP) focusing on resource management and microservices architecture. Honed skills in cloud deployment, optimization, and scalable application design.',
+          metrics: ['Cloud deployment', 'Resource optimization'],
+          icon: Briefcase
+        },
+        {
+          title: 'Kubernetes Implementation',
+          description: 'Implemented and deployed containerized applications using Kubernetes, ensuring scalability and efficient orchestration.',
+          metrics: ['Containerized apps', 'K8s deployment'],
+          icon: Zap
+        }
+      ],
+      tools: ['GCP', 'Kubernetes', 'Microservices', 'Docker']
     },
     {
       company: 'CYNUX ERA',
@@ -92,7 +113,7 @@ const Experience = () => {
           icon: Briefcase
         }
       ],
-      tools: ['CRM', 'Excel', 'Reporting Tools']
+      tools: ['Excel', 'Word', 'Database Management']
     }
   ];
 
@@ -103,10 +124,10 @@ const Experience = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-4 text-black">
-              Work <span className="text-yellow-400">Experience</span>
+              Career <span className="text-yellow-400">Reps</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From product operations at CRED to building EdTech platforms — each role shaped how I think, ship, and measure impact.
+              From product operations at CRED to building EdTech platforms and early-stage ops — each role shaped how I think, ship, and measure impact.
             </p>
           </div>
 

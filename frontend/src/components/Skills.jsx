@@ -21,7 +21,6 @@ const Skills = () => {
       color: 'yellow',
       skills: [
         'A/B Experimentation',
-        'User Research',
         'Campaign Strategy',
         'Funnel Optimization',
         'Product Analytics',
@@ -37,8 +36,7 @@ const Skills = () => {
         'Mixpanel',
         'SQL',
         'Grafana',
-        'Data Analysis',
-        'Behavioral Metrics'
+        'Data Analysis'
       ]
     },
     {
@@ -49,8 +47,7 @@ const Skills = () => {
         'Claude API',
         'LLM Integration',
         'Prompt Engineering',
-        'AI Tooling',
-        'Conversational AI',
+        'Agent Building',
         'Automation Workflows'
       ]
     },
@@ -64,7 +61,8 @@ const Skills = () => {
         'AWS',
         'GCP',
         'Vercel',
-        'Railway'
+        'Railway',
+        'Basic Coding'
       ]
     },
     {
