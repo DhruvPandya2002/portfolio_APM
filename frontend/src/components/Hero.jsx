@@ -18,15 +18,10 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Name */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            DHRUV LALIT PANDYA
-          </h1>
-          
           {/* Main Message */}
-          <p className="text-xl md:text-2xl font-semibold text-gray-200 mb-6 leading-relaxed">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Building <span className="text-yellow-400">0→1 products</span> that scale <span className="text-yellow-400">real impact</span>
-          </p>
+          </h1>
           
           {/* Tagline */}
           <div className="mb-10 space-y-3">
