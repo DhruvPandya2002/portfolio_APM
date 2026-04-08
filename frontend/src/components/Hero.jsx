@@ -18,31 +18,27 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Role badge */}
-          <div className="inline-block mb-6">
-            <span className="px-6 py-2 bg-yellow-400 text-black font-bold text-sm tracking-wider rounded-md shadow-[4px_4px_0px_0px_rgba(255,107,53,1)]">
-              PRODUCT OPERATIONS @ CRED
-            </span>
-          </div>
-          
           {/* Main Message */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight max-w-5xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight max-w-5xl mx-auto">
             Building <span className="text-yellow-400">0→1 products</span>
             <br />
-            that solve real problems
+            that scale
             <br />
-            <span className="text-yellow-400">at scale</span>
+            <span className="text-yellow-400">real impact</span>
           </h1>
           
           {/* Name & Tagline */}
-          <p className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <p className="text-2xl md:text-3xl font-bold text-white mb-6">
             DHRUV LALIT PANDYA
           </p>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Turning data into decisions. Building systems that scale.
-            <br />
-            <span className="text-yellow-400 font-semibold">Shipped 20+ campaigns | Impacted 9M+ users</span>
-          </p>
+          <div className="mb-10">
+            <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+              Turning data into decisions. Building systems that scale.
+            </p>
+            <p className="text-lg md:text-xl text-yellow-400 font-semibold">
+              Shipped 20+ campaigns | Impacted 9M+ users
+            </p>
+          </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-6 justify-center items-center">
