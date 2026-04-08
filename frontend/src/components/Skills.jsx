@@ -94,10 +94,10 @@ const Skills = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-black">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
               Skills & <span className="text-yellow-400">Tools</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               From product operations to AI automation — the complete toolkit for building, analyzing, and scaling products.
             </p>
           </div>

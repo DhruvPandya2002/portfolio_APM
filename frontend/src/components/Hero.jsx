@@ -17,25 +17,23 @@ const Hero = () => {
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Main Message */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight max-w-5xl mx-auto">
-            Building <span className="text-yellow-400">0→1 products</span>
-            <br />
-            that scale
-            <br />
-            <span className="text-yellow-400">real impact</span>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Name */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            DHRUV LALIT PANDYA
           </h1>
           
-          {/* Name & Tagline */}
-          <p className="text-2xl md:text-3xl font-bold text-white mb-6">
-            DHRUV LALIT PANDYA
+          {/* Main Message */}
+          <p className="text-xl md:text-2xl font-semibold text-gray-200 mb-6 leading-relaxed">
+            Building <span className="text-yellow-400">0→1 products</span> that scale <span className="text-yellow-400">real impact</span>
           </p>
-          <div className="mb-10">
-            <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+          
+          {/* Tagline */}
+          <div className="mb-10 space-y-3">
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
               Turning data into decisions. Building systems that scale.
             </p>
-            <p className="text-lg md:text-xl text-yellow-400 font-semibold">
+            <p className="text-sm md:text-base text-yellow-400 font-medium">
               Shipped 20+ campaigns | Impacted 9M+ users
             </p>
           </div>

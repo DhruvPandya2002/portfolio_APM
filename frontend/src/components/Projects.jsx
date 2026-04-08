@@ -61,16 +61,17 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-black">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
               Featured <span className="text-yellow-400">Projects</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Each project is a complete product story — identifying problems, shipping solutions, and measuring real impact.
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              A project is never a straight line — it's a loop:<br />
+              <span className="font-semibold text-gray-700">Understand → Build → Measure → Learn → Improve.</span>
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {projects.map((project, index) => {
               const colors = colorClasses[project.color];
               const Icon = project.icon;
@@ -78,43 +79,43 @@ const Projects = () => {
               return (
                 <Card
                   key={index}
-                  className={`p-8 border-2 ${colors.border} ${colors.shadow} ${colors.hoverShadow} hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-300`}
+                  className={`p-6 md:p-8 border-2 ${colors.border} ${colors.shadow} ${colors.hoverShadow} hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-300`}
                 >
-                  <div className="grid md:grid-cols-3 gap-8">
+                  <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
                     {/* Main Content */}
-                    <div className="md:col-span-2 space-y-6">
+                    <div className="lg:col-span-2 space-y-4 md:space-y-6">
                       {/* Header */}
                       <div>
-                        <div className="flex items-start gap-4 mb-3">
-                          <div className={`${colors.iconBg} w-14 h-14 rounded-lg flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)]`}>
-                            <Icon className="w-7 h-7 text-white" />
+                        <div className="flex items-start gap-3 md:gap-4 mb-3">
+                          <div className={`${colors.iconBg} w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] flex-shrink-0`}>
+                            <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-3xl font-bold text-black mb-1">{project.title}</h3>
-                            <p className="text-lg font-semibold text-gray-600">{project.subtitle}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold text-black mb-1">{project.title}</h3>
+                            <p className="text-base md:text-lg font-semibold text-gray-600">{project.subtitle}</p>
                           </div>
                         </div>
                       </div>
 
                       {/* Description */}
                       <div>
-                        <p className="text-gray-700 leading-relaxed">{project.description}</p>
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed">{project.description}</p>
                       </div>
 
                       {/* Problem Statement */}
-                      <div className={`p-4 ${colors.bg} rounded-lg border-l-4 ${colors.border}`}>
-                        <p className="text-sm font-bold text-gray-500 mb-1">PROBLEM</p>
-                        <p className="text-gray-700">{project.problem}</p>
+                      <div className={`p-3 md:p-4 ${colors.bg} rounded-lg border-l-4 ${colors.border}`}>
+                        <p className="text-xs md:text-sm font-bold text-gray-500 mb-1">PROBLEM</p>
+                        <p className="text-sm md:text-base text-gray-700">{project.problem}</p>
                       </div>
 
                       {/* Tech Stack */}
                       <div>
-                        <p className="text-sm font-bold text-gray-500 mb-3">TECH STACK</p>
+                        <p className="text-xs md:text-sm font-bold text-gray-500 mb-3">TECH STACK</p>
                         <div className="flex flex-wrap gap-2">
                           {project.tech.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="px-3 py-1 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-md"
+                              className="px-2 md:px-3 py-1 bg-white border border-gray-300 text-gray-700 text-xs md:text-sm font-medium rounded-md"
                             >
                               {tech}
                             </span>
@@ -124,18 +125,18 @@ const Projects = () => {
                     </div>
 
                     {/* Impact Metrics */}
-                    <div className="md:col-span-1">
-                      <div className="sticky top-8">
-                        <p className="text-sm font-bold text-gray-500 mb-4">IMPACT METRICS</p>
-                        <div className="space-y-4">
+                    <div className="lg:col-span-1">
+                      <div className="lg:sticky lg:top-8">
+                        <p className="text-xs md:text-sm font-bold text-gray-500 mb-4">IMPACT METRICS</p>
+                        <div className="grid grid-cols-3 lg:grid-cols-1 gap-3 md:gap-4">
                           {project.impact.map((metric, metricIndex) => (
                             <div
                               key={metricIndex}
-                              className="p-4 bg-white rounded-lg border-2 border-gray-200 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.05)]"
+                              className="p-3 md:p-4 bg-white rounded-lg border-2 border-gray-200 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.05)]"
                             >
                               <p className="text-xs font-bold text-gray-500 mb-1">{metric.label}</p>
-                              <p className="text-3xl font-bold text-black mb-1">{metric.value}</p>
-                              <p className="text-sm text-gray-600">{metric.subtext}</p>
+                              <p className="text-2xl md:text-3xl font-bold text-black mb-1">{metric.value}</p>
+                              <p className="text-xs md:text-sm text-gray-600">{metric.subtext}</p>
                             </div>
                           ))}
                         </div>

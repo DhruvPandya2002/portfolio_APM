@@ -1,8 +1,14 @@
-import React from 'react';
-import { Briefcase, Calendar, TrendingUp, Zap, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Briefcase, Calendar, TrendingUp, Zap, Clock, ChevronDown, ChevronUp } from 'lucide-react';
 import { Card } from './ui/card';
 
 const Experience = () => {
+  const [expandedIndex, setExpandedIndex] = useState(0); // First item expanded by default
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? -1 : index);
+  };
+
   const experiences = [
     {
       company: 'CRED',
@@ -123,98 +129,119 @@ const Experience = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-black">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
               Career <span className="text-yellow-400">Reps</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               From product operations at CRED to building EdTech platforms and early-stage ops — each role shaped how I think, ship, and measure impact.
             </p>
           </div>
 
           {/* Timeline */}
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative">
-                {/* Timeline line */}
-                {index !== experiences.length - 1 && (
-                  <div className="absolute left-8 top-24 w-1 h-full bg-gradient-to-b from-yellow-400 to-purple-500 hidden md:block"></div>
-                )}
+          <div className="space-y-6">
+            {experiences.map((exp, index) => {
+              const isExpanded = expandedIndex === index;
+              
+              return (
+                <div key={index} className="relative">
+                  {/* Timeline line */}
+                  {index !== experiences.length - 1 && (
+                    <div className="absolute left-8 top-24 w-1 h-full bg-gradient-to-b from-yellow-400 to-purple-500 hidden md:block"></div>
+                  )}
 
-                <Card className="p-8 border-2 border-gray-200 hover:border-yellow-400 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,211,0,0.3)]">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    {/* Company badge */}
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,107,53,1)]">
-                        <Briefcase className="w-8 h-8 text-black" />
-                      </div>
-                    </div>
-
-                    <div className="flex-grow">
-                      {/* Header */}
-                      <div className="mb-6">
-                        <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <h3 className="text-3xl font-bold text-black">{exp.company}</h3>
-                          {exp.current && (
-                            <span className="px-3 py-1 bg-green-400 text-black text-xs font-bold rounded-md">
-                              CURRENT
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-xl font-semibold text-gray-700 mb-2">{exp.role}</p>
-                        <div className="flex items-center gap-2 text-gray-500">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{exp.duration}</span>
+                  <Card className="p-6 md:p-8 border-2 border-gray-200 hover:border-yellow-400 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[6px_6px_0px_0px_rgba(255,211,0,0.3)]">
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                      {/* Company badge */}
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,107,53,1)]">
+                          <Briefcase className="w-8 h-8 text-black" />
                         </div>
                       </div>
 
-                      {/* Achievements */}
-                      <div className="space-y-6 mb-6">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <div key={achIndex} className="">
-                            <div className="flex items-start gap-3 mb-2">
-                              <div className="flex-shrink-0 mt-1">
-                                <achievement.icon className="w-5 h-5 text-yellow-500" />
-                              </div>
-                              <div>
-                                <h4 className="font-bold text-lg text-black mb-1">{achievement.title}</h4>
-                                <p className="text-gray-600 mb-3">{achievement.description}</p>
-                                {achievement.metrics.length > 0 && (
-                                  <div className="flex flex-wrap gap-2">
-                                    {achievement.metrics.map((metric, metricIndex) => (
-                                      <span
-                                        key={metricIndex}
-                                        className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-semibold rounded-md"
-                                      >
-                                        {metric}
-                                      </span>
-                                    ))}
+                      <div className="flex-grow">
+                        {/* Header - Always visible */}
+                        <div 
+                          className="cursor-pointer"
+                          onClick={() => toggleExpand(index)}
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
+                            <div className="flex flex-wrap items-center gap-3">
+                              <h3 className="text-2xl md:text-3xl font-bold text-black">{exp.company}</h3>
+                              {exp.current && (
+                                <span className="px-3 py-1 bg-green-400 text-black text-xs font-bold rounded-md">
+                                  CURRENT
+                                </span>
+                              )}
+                            </div>
+                            <button className="text-gray-500 hover:text-yellow-400 transition-colors">
+                              {isExpanded ? (
+                                <ChevronUp className="w-6 h-6" />
+                              ) : (
+                                <ChevronDown className="w-6 h-6" />
+                              )}
+                            </button>
+                          </div>
+                          <p className="text-lg md:text-xl font-semibold text-gray-700 mb-2">{exp.role}</p>
+                          <div className="flex items-center gap-2 text-gray-500">
+                            <Calendar className="w-4 h-4" />
+                            <span className="text-sm">{exp.duration}</span>
+                          </div>
+                        </div>
+
+                        {/* Expandable Details */}
+                        {isExpanded && (
+                          <div className="mt-6 space-y-6 animate-fadeInUp">
+                            {/* Achievements */}
+                            <div className="space-y-6">
+                              {exp.achievements.map((achievement, achIndex) => (
+                                <div key={achIndex} className="">
+                                  <div className="flex items-start gap-3 mb-2">
+                                    <div className="flex-shrink-0 mt-1">
+                                      <achievement.icon className="w-5 h-5 text-yellow-500" />
+                                    </div>
+                                    <div>
+                                      <h4 className="font-bold text-base md:text-lg text-black mb-1">{achievement.title}</h4>
+                                      <p className="text-sm md:text-base text-gray-600 mb-3">{achievement.description}</p>
+                                      {achievement.metrics.length > 0 && (
+                                        <div className="flex flex-wrap gap-2">
+                                          {achievement.metrics.map((metric, metricIndex) => (
+                                            <span
+                                              key={metricIndex}
+                                              className="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs md:text-sm font-semibold rounded-md"
+                                            >
+                                              {metric}
+                                            </span>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
                                   </div>
-                                )}
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* Tools */}
+                            <div className="border-t border-gray-200 pt-4">
+                              <p className="text-xs md:text-sm font-semibold text-gray-500 mb-2">TOOLS & TECH</p>
+                              <div className="flex flex-wrap gap-2">
+                                {exp.tools.map((tool, toolIndex) => (
+                                  <span
+                                    key={toolIndex}
+                                    className="px-3 py-1 bg-gray-100 text-gray-700 text-xs md:text-sm rounded-md border border-gray-200"
+                                  >
+                                    {tool}
+                                  </span>
+                                ))}
                               </div>
                             </div>
                           </div>
-                        ))}
-                      </div>
-
-                      {/* Tools */}
-                      <div className="border-t border-gray-200 pt-4">
-                        <p className="text-sm font-semibold text-gray-500 mb-2">TOOLS & TECH</p>
-                        <div className="flex flex-wrap gap-2">
-                          {exp.tools.map((tool, toolIndex) => (
-                            <span
-                              key={toolIndex}
-                              className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-md border border-gray-200"
-                            >
-                              {tool}
-                            </span>
-                          ))}
-                        </div>
+                        )}
                       </div>
                     </div>
-                  </div>
-                </Card>
-              </div>
-            ))}
+                  </Card>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
