@@ -56,7 +56,7 @@ const Contact = () => {
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs md:text-sm text-gray-400 font-semibold mb-1">LINKEDIN</p>
-                    <p className="text-yellow-400 hover:text-yellow-300 font-medium text-sm md:text-lg underline">dhruvpandya2002</p>
+                    <p className="text-white font-medium text-sm md:text-lg">dhruvpandya2002</p>
                   </div>
                 </a>
               </div>
