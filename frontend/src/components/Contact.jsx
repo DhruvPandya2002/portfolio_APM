@@ -3,12 +3,16 @@ import { Mail, Linkedin } from 'lucide-react';
 import { trackContactClick } from '../utils/analytics';
 
 const Contact = () => {
-  const handleEmailClick = () => {
+  const handleEmailClick = (e) => {
+    console.log('📧 Email clicked - tracking...');
     trackContactClick('Email');
+    // Allow default mailto: behavior
   };
 
-  const handleLinkedInClick = () => {
+  const handleLinkedInClick = (e) => {
+    console.log('🔗 LinkedIn clicked - tracking...');
     trackContactClick('LinkedIn');
+    // Allow navigation
   };
 
   return (

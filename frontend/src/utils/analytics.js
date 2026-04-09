@@ -77,22 +77,42 @@ export const trackSectionView = (sectionName) => {
 
 // Track contact interaction
 export const trackContactClick = (contactType) => {
-  if (!isInitialized) return;
+  console.log(`[Analytics] trackContactClick called with: ${contactType}`);
   
-  mixpanel.track('Contact Clicked', {
-    contact_type: contactType,
-    timestamp: new Date().toISOString(),
-  });
+  if (!isInitialized) {
+    console.warn('[Analytics] Mixpanel not initialized - skipping Contact Clicked');
+    return;
+  }
+  
+  try {
+    mixpanel.track('Contact Clicked', {
+      contact_type: contactType,
+      timestamp: new Date().toISOString(),
+    });
+    console.log(`✅ [Analytics] Contact Clicked event sent: ${contactType}`);
+  } catch (error) {
+    console.error('[Analytics] Error tracking contact click:', error);
+  }
 };
 
 // Track experience card expansion
 export const trackExperienceExpand = (companyName) => {
-  if (!isInitialized) return;
+  console.log(`[Analytics] trackExperienceExpand called with: ${companyName}`);
   
-  mixpanel.track('Experience Card Expanded', {
-    company: companyName,
-    timestamp: new Date().toISOString(),
-  });
+  if (!isInitialized) {
+    console.warn('[Analytics] Mixpanel not initialized - skipping Experience Card Expanded');
+    return;
+  }
+  
+  try {
+    mixpanel.track('Experience Card Expanded', {
+      company: companyName,
+      timestamp: new Date().toISOString(),
+    });
+    console.log(`✅ [Analytics] Experience Card Expanded event sent: ${companyName}`);
+  } catch (error) {
+    console.error('[Analytics] Error tracking experience expand:', error);
+  }
 };
 
 // Identify user (for returning visitors)

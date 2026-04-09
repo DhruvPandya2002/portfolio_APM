@@ -12,6 +12,7 @@ const Experience = () => {
     
     // Track expansion
     if (newIndex === index) {
+      console.log(`🏢 Experience card expanded: ${companyName}`);
       trackExperienceExpand(companyName);
     }
   };
