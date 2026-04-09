@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { Briefcase, Calendar, TrendingUp, Zap, Clock, ChevronDown, ChevronUp } from 'lucide-react';
 import { Card } from './ui/card';
+import { trackExperienceExpand } from '../utils/analytics';
 
 const Experience = () => {
   const [expandedIndex, setExpandedIndex] = useState(0); // First item expanded by default
 
-  const toggleExpand = (index) => {
-    setExpandedIndex(expandedIndex === index ? -1 : index);
+  const toggleExpand = (index, companyName) => {
+    const newIndex = expandedIndex === index ? -1 : index;
+    setExpandedIndex(newIndex);
+    
+    // Track expansion
+    if (newIndex === index) {
+      trackExperienceExpand(companyName);
+    }
   };
 
   const experiences = [
@@ -141,7 +148,7 @@ const Experience = () => {
                         {/* Header - Always visible */}
                         <div 
                           className="cursor-pointer"
-                          onClick={() => toggleExpand(index)}
+                          onClick={() => toggleExpand(index, exp.company)}
                         >
                           <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
                             <div className="flex flex-wrap items-center gap-3">

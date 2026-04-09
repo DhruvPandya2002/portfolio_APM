@@ -1,12 +1,15 @@
 import React from 'react';
 import { Button } from './ui/button';
+import { trackButtonClick } from '../utils/analytics';
 
 const Hero = () => {
   const scrollToContact = () => {
+    trackButtonClick('Get In Touch', { location: 'Hero Section' });
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToWork = () => {
+    trackButtonClick('View My Work', { location: 'Hero Section' });
     document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
   };
 
