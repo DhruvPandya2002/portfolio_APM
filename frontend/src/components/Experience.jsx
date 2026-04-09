@@ -59,27 +59,6 @@ const Experience = () => {
       tools: ['Databricks', 'AWS', 'GCP']
     },
     {
-      company: 'Innovate',
-      role: 'Cloud Computing Internship',
-      duration: 'June 2024 - Aug 2024',
-      current: false,
-      achievements: [
-        {
-          title: 'GCP & Microservices Architecture',
-          description: 'Collaborated with Google Cloud Platform (GCP) focusing on resource management and microservices architecture. Honed skills in cloud deployment, optimization, and scalable application design.',
-          metrics: ['Cloud deployment', 'Resource optimization'],
-          icon: Briefcase
-        },
-        {
-          title: 'Kubernetes Implementation',
-          description: 'Implemented and deployed containerized applications using Kubernetes, ensuring scalability and efficient orchestration.',
-          metrics: ['Containerized apps', 'K8s deployment'],
-          icon: Zap
-        }
-      ],
-      tools: ['GCP', 'Kubernetes', 'Microservices', 'Docker']
-    },
-    {
       company: 'CYNUX ERA',
       role: 'Founder Office - Product Developer',
       duration: 'Sept 2024 - Mar 2025',
