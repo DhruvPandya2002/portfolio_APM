@@ -1,24 +1,33 @@
 import mixpanel from 'mixpanel-browser';
 
-// Initialize Mixpanel
-const MIXPANEL_TOKEN = process.env.REACT_APP_MIXPANEL_TOKEN;
+// Initialize Mixpanel with hardcoded token (Project tokens are safe to expose)
+const MIXPANEL_TOKEN = 'a01ef34a6d82a6581d02a50250d947cc';
 
 let isInitialized = false;
 
 export const initAnalytics = () => {
   if (!MIXPANEL_TOKEN) {
-    console.warn('Mixpanel token not found');
+    console.error('❌ Mixpanel token not found');
     return;
   }
 
   if (!isInitialized) {
-    mixpanel.init(MIXPANEL_TOKEN, {
-      autocapture: true,
-      record_sessions_percent: 100,
-      debug: false, // Set to true for debugging
-    });
-    isInitialized = true;
-    console.log('✅ Mixpanel Analytics Initialized');
+    try {
+      mixpanel.init(MIXPANEL_TOKEN, {
+        debug: true, // Enable debug mode to see logs
+        track_pageview: true,
+        persistence: 'localStorage',
+      });
+      isInitialized = true;
+      console.log('✅ Mixpanel Analytics Initialized with token:', MIXPANEL_TOKEN.substring(0, 8) + '...');
+      
+      // Test event immediately
+      mixpanel.track('Mixpanel Initialized', {
+        timestamp: new Date().toISOString(),
+      });
+    } catch (error) {
+      console.error('❌ Mixpanel initialization failed:', error);
+    }
   }
 };
 
