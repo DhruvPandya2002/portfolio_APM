@@ -14,9 +14,25 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-5 gap-8 items-start">
+            {/* Profile Image */}
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="relative">
+                <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-yellow-400 shadow-[8px_8px_0px_0px_rgba(255,107,53,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,107,53,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-300">
+                  <img 
+                    src="/dhruv-photo.jpg" 
+                    alt="Dhruv Lalit Pandya - Product Operations @ CRED" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-purple-400 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] hidden md:block"></div>
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-400 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] hidden md:block"></div>
+              </div>
+            </div>
+
             {/* Main About Content */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               <Card className="p-6 md:p-8 border-2 border-gray-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[6px_6px_0px_0px_rgba(255,211,0,0.3)] hover:border-yellow-400 transition-all duration-300">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-14 h-14 bg-yellow-400 rounded-lg flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,107,53,1)] flex-shrink-0">
@@ -49,7 +65,7 @@ const About = () => {
             </div>
 
             {/* What Drives Me Cards */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-5 grid md:grid-cols-3 gap-6 mt-8">
               <Card className="p-6 border-2 border-purple-200 bg-purple-50 shadow-[4px_4px_0px_0px_rgba(168,85,247,0.3)]">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-purple-400 rounded-lg flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)]">
