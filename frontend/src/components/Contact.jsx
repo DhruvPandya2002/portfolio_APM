@@ -10,9 +10,15 @@ const Contact = () => {
   };
 
   const handleLinkedInClick = (e) => {
+    e.preventDefault(); // Prevent immediate navigation
     console.log('🔗 LinkedIn clicked - tracking...');
     trackContactClick('LinkedIn');
-    // Allow navigation
+    
+    // Navigate after a short delay to ensure tracking completes
+    const linkedinUrl = e.currentTarget.href;
+    setTimeout(() => {
+      window.open(linkedinUrl, '_blank');
+    }, 300);
   };
 
   return (
