@@ -113,18 +113,36 @@ const Experience = () => {
     },
     {
       company: 'Siddhi Vinayak Enterprises',
-      role: 'Customer Operations & Management',
+      role: 'Customer Operations & Marketing',
       duration: 'Nov 2020 - Jan 2022',
       current: false,
       achievements: [
         {
           title: 'Customer Relations & Operations',
-          description: 'Managed customer queries and acted as liaison between customers and production teams, improving satisfaction and retention. Maintained production, sales, and customer records.',
-          metrics: ['Improved satisfaction', 'Enhanced retention'],
+          description: 'Managed customer queries and served as liaison between customers and production teams, improving satisfaction and retention.',
+          metrics: ['Customer satisfaction', 'Production coordination'],
+          icon: Briefcase
+        },
+        {
+          title: 'Brand & Stakeholder Management',
+          description: 'Built and maintained brand relationships with key partners such as Vishal Prints, strengthening vendor and stakeholder communication.',
+          metrics: ['Partner relationships', 'Vendor alignment'],
+          icon: TrendingUp
+        },
+        {
+          title: 'Market Expansion',
+          description: 'Onboarded new manufacturers to expand market presence, focusing on quality product sourcing and supplier alignment.',
+          metrics: ['New manufacturers', 'Market expansion'],
+          icon: Zap
+        },
+        {
+          title: 'Sales & Inventory Management',
+          description: 'Maintained sales and inventory records, generating reports that supported management decision-making.',
+          metrics: ['Sales tracking', 'Data-driven decisions'],
           icon: Briefcase
         }
       ],
-      tools: ['Excel', 'Word', 'Database Management']
+      tools: ['Excel', 'Word', 'Database Management', 'CRM']
     }
   ];
 
