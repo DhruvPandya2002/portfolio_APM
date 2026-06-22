@@ -50,7 +50,7 @@ const About = () => {
                   </p>
                   
                   <p className="text-base md:text-lg">
-                    At CRED, I've shipped <span className="font-semibold text-yellow-600">20+ campaigns</span> impacting <span className="font-semibold text-yellow-600">9M+ users</span>, reduced onboarding drop-offs by <span className="font-semibold text-yellow-600">15%</span>, and built AI-powered internal tools that cut operational time by <span className="font-semibold text-yellow-600">75%</span>.
+                    At CRED, I've shipped <span className="font-semibold text-yellow-600">20+ campaigns</span> impacting <span className="font-semibold text-yellow-600">9M+ users</span>, achieved <span className="font-semibold text-yellow-600">+11.3% user activation</span>, cut monthly campaign burn by <span className="font-semibold text-yellow-600">45%</span> (₹2.7 Cr → ₹1.5 Cr), and built AI-powered internal tools that cut operational time by <span className="font-semibold text-yellow-600">75%</span>.
                   </p>
 
                   <p className="text-base md:text-lg">
@@ -58,7 +58,7 @@ const About = () => {
                   </p>
 
                   <p className="text-base md:text-lg">
-                    I believe in <span className="font-semibold text-black">shipping fast, learning faster</span>, and letting data tell the story. Whether it's A/B testing campaign strategies, debugging reward logic at 2 AM, or automating repetitive workflows with LLMs—I'm always looking for leverage points that move the needle.
+                    I believe in <span className="font-semibold text-black">shipping fast, learning faster</span>, and letting data tell the story. Whether it's A/B testing campaign strategies, debugging reward logic, or automating repetitive workflows with LLMs—I'm always looking for leverage points that move the needle.
                   </p>
                 </div>
               </Card>

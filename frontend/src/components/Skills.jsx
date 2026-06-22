@@ -16,66 +16,56 @@ import {
 const Skills = () => {
   const skillCategories = [
     {
-      category: 'Product & Strategy',
-      icon: FileText,
+      category: 'AI Systems',
+      icon: Sparkles,
       color: 'yellow',
       skills: [
-        'A/B Experimentation',
-        'Campaign Strategy',
-        'Funnel Optimization',
-        'Product Analytics',
-        'Decision Tree Logic'
+        'LLM Workflow Design',
+        'Prompt Engineering',
+        'Conversational AI Agents',
+        'Campaign Automation',
+        'Debugging Systems'
       ]
     },
     {
-      category: 'Data & Analytics',
+      category: 'Analytics',
       icon: BarChart3,
       color: 'purple',
       skills: [
-        'Databricks',
-        'Mixpanel',
         'SQL',
-        'Grafana',
-        'Data Analysis'
+        'Rule Engines (Decision Trees)',
+        'A/B Testing & Funnel Optimization',
+        'Product Analytics',
+        'Mixpanel & Databricks',
+        'User Segmentation'
       ]
     },
     {
-      category: 'AI & Automation',
-      icon: Sparkles,
+      category: 'Product Execution',
+      icon: Zap,
       color: 'orange',
       skills: [
-        'Claude API',
-        'LLM Integration',
-        'Prompt Engineering',
-        'Agent Building',
-        'Automation Workflows'
+        'Campaign Strategy',
+        'SOP & Process Design',
+        'Cross-Functional Collaboration',
+        'Experiment Design',
+        'Impact Measurement',
+        'Agile/Scrum'
       ]
     },
     {
-      category: 'Development & Tools',
+      category: 'Technical Foundations',
       icon: Code,
       color: 'green',
       skills: [
-        'MongoDB',
-        'Postman API',
         'AWS',
-        'GCP',
-        'Vercel',
-        'Railway',
-        'Basic Coding'
-      ]
-    },
-    {
-      category: 'Operations',
-      icon: Zap,
-      color: 'blue',
-      skills: [
-        'Rule Engine Config',
-        'Campaign Management',
-        'Fraud Prevention',
-        'SOP Development',
-        'Cross-functional Coordination',
-        'Stakeholder Management'
+        'Retool',
+        'App Script',
+        'Jira',
+        'GitHub',
+        'Docker',
+        'Grafana',
+        'Postman'
       ]
     }
   ];

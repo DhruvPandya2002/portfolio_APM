@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Calendar, TrendingUp, Zap, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { Briefcase, Calendar, TrendingUp, Zap, Clock, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { Card } from './ui/card';
 import { trackExperienceExpand } from '../utils/analytics';
 
@@ -26,14 +26,26 @@ const Experience = () => {
       achievements: [
         {
           title: 'Onboarding Revamp (9M Users)',
-          description: 'Conducted user interviews to identify mid-journey drop-off root causes. Synthesized research into product decisions, redesigning the onboarding journey.',
+          description: 'Reduced onboarding drop-offs by 15% across NTU users driven by user interviews that surfaced mid-journey friction, informing a full end-to-end flow redesign executed in collaboration with engineering and design teams.',
           metrics: ['15% drop-off reduction', '9M+ users educated'],
           icon: TrendingUp
         },
         {
           title: 'Campaign Strategy & Transactional Growth',
-          description: 'Designed and shipped 20+ category-specific campaigns across utility bills, rent, and education verticals. Built personalized incentive models.',
-          metrics: ['+12% user activation', '+10% reactivation'],
+          description: 'Designed and shipped 20+ category-specific campaigns across utility bills, rent, and education verticals. Achieved +11.3% user activation and +9.6% reactivation with a +16.3% lift in Single-LOB to Multi-LOB conversions via strategic budget reinvestment.',
+          metrics: ['+11.3% activation', '+9.6% reactivation', '+16.3% LOB conversion'],
+          icon: Zap
+        },
+        {
+          title: 'Burn Efficiency & Unit Economics',
+          description: 'Cut monthly campaign burn by ~45% (₹2.7 Cr → ₹1.5 Cr) by identifying and removing penny cashback subsidies for low-risk user segments, sustained activation growth while materially improving campaign unit economics.',
+          metrics: ['45% burn reduction', '₹1.2 Cr saved monthly'],
+          icon: TrendingUp
+        },
+        {
+          title: 'Structural Fixes & Campaign Hygiene',
+          description: 'Identified and resolved long-standing structural leaks inflating campaign costs: fixed cashback oversell across BBPS surfaces and eliminated legacy issues including multi-campaign tagging errors and incorrect BBPS campaign assignments.',
+          metrics: ['Reduced reward leakage', 'Improved cost accuracy'],
           icon: Zap
         },
         {
@@ -44,18 +56,18 @@ const Experience = () => {
         },
         {
           title: 'AI Campaign Automation (Internal Tool)',
-          description: 'Co-built an LLM-based internal tool translating business requirements into JSON campaign configurations.',
-          metrics: ['58% faster setup', '75% effort reduction'],
-          icon: Clock
+          description: 'Co-built an LLM-powered internal tool translating business requirements into JSON campaign configurations reduced config time by ~75%.',
+          metrics: ['75% config time reduction', '60 min → 15 min'],
+          icon: Sparkles
         },
         {
           title: 'AI Debugging Assistant',
-          description: 'Built a conversational AI agent for campaign diagnostics with SQL-backed real-time data retrieval.',
-          metrics: ['80% faster resolution', '30min vs 2-3hrs'],
+          description: 'Built a conversational AI agent for campaign diagnostics with SQL-backed real-time data retrieval cut escalation resolution time by ~80%, eliminating recurring L1 support.',
+          metrics: ['80% faster resolution', '2-3hrs → 30min'],
           icon: Zap
         }
       ],
-      tools: ['Grafana', 'Postman API', 'Databricks', 'Mixpanel', 'Claude AI', 'LLM', 'Jira API']
+      tools: ['Grafana', 'Postman', 'Databricks', 'Mixpanel', 'Claude', 'LLM', 'Jira API', 'SQL', 'AWS', 'Retool']
     },
     {
       company: 'MACTORES',

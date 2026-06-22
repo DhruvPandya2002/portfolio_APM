@@ -32,7 +32,7 @@ const Hero = () => {
               Turning data into decisions. Building systems that scale.
             </p>
             <p className="text-sm md:text-base text-yellow-400 font-medium">
-              Shipped 20+ campaigns | Impacted 9M+ users
+              20+ campaigns shipped | 9M+ users | +11.3% activation | 45% burn reduction
             </p>
           </div>
           
