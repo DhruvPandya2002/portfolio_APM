@@ -37,6 +37,12 @@ const Experience = () => {
           icon: Zap
         },
         {
+          title: 'Cross-Sell Slab Automation',
+          description: 'Built scheduled automation (6:30 AM daily) that queries Databricks to extract slab_ids from 1,500+ cross-sell reward slabs, auto-populates Jira fields, and syncs to business tracking sheets.',
+          metrics: ['1-2hrs saved daily', '30-50 tickets automated'],
+          icon: Clock
+        },
+        {
           title: 'AI Campaign Automation (Internal Tool)',
           description: 'Co-built an LLM-based internal tool translating business requirements into JSON campaign configurations.',
           metrics: ['58% faster setup', '75% effort reduction'],
@@ -49,7 +55,7 @@ const Experience = () => {
           icon: Zap
         }
       ],
-      tools: ['Grafana', 'Postman API', 'Databricks', 'Mixpanel', 'Claude AI', 'LLM']
+      tools: ['Grafana', 'Postman API', 'Databricks', 'Mixpanel', 'Claude AI', 'LLM', 'Jira API']
     },
     {
       company: 'MACTORES',

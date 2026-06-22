@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from './ui/card';
-import { Sparkles, MessageSquare, Clock, Zap, TrendingUp, Database } from 'lucide-react';
+import { Sparkles, MessageSquare, Clock, Zap, TrendingUp, Database, Calendar } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -31,6 +31,20 @@ const Projects = () => {
       tech: ['Conversational AI', 'SQL', 'Database Integration', 'Real-time Data', 'Diagnostics'],
       icon: MessageSquare,
       color: 'purple'
+    },
+    {
+      title: 'Cross-Sell Slab Automation',
+      subtitle: 'Ops Automation @ CRED',
+      description: 'Scheduled automation system that queries Databricks to extract slab_ids from active merchant campaign configs, auto-populates Jira fields, and syncs live slab data to business tracking sheets.',
+      problem: '30–50 daily Jira tickets required manual slab_id lookups across 1,500+ cross-sell reward slabs, consuming 1–2 hours each morning and creating a recurring ops bottleneck.',
+      impact: [
+        { label: 'Time Saved', value: '100%', subtext: '1-2hrs → 0min' },
+        { label: 'Daily Tickets', value: '30-50', subtext: 'Auto-processed' },
+        { label: 'Manual Work', value: '0%', subtext: 'Fully automated' }
+      ],
+      tech: ['Databricks', 'Jira API', 'Scheduled Jobs', 'SQL', 'Data Sync', 'Automation'],
+      icon: Calendar,
+      color: 'green'
     }
   ];
 
@@ -52,6 +66,15 @@ const Projects = () => {
       hoverShadow: 'hover:shadow-[10px_10px_0px_0px_rgba(168,85,247,1)]',
       text: 'text-purple-600',
       badge: 'bg-purple-400'
+    },
+    green: {
+      bg: 'bg-green-50',
+      border: 'border-green-400',
+      iconBg: 'bg-green-400',
+      shadow: 'shadow-[6px_6px_0px_0px_rgba(34,197,94,1)]',
+      hoverShadow: 'hover:shadow-[10px_10px_0px_0px_rgba(34,197,94,1)]',
+      text: 'text-green-600',
+      badge: 'bg-green-400'
     }
   };
 
